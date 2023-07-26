@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF2PPT</title>
+    <!-- Add your CSS stylesheets and other necessary external resources here -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>PDF2PPT</h1>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <!-- File Upload -->
+        <label for="pdf1">Upload OPQ File:</label>
+        <input type="file" id="pdf1" name="pdf1">
+        <br>
+
+        <label for="pdf2">Upload Verify File:</label>
+        <input type="file" id="pdf2" name="pdf2">
+        <br>
+
+        <!-- Checkboxes -->
+<label for="checkbox1">
+    <input type="checkbox" id="checkbox1" name="checkbox" value="Besluta och starta aktiviteter"> Besluta och starta aktiviteter
+</label>
+<br>
+
+<label for="checkbox2">
+    <input type="checkbox" id="checkbox2" name="checkbox" value="Leda och följa upp"> Leda och följa upp
+</label>
+<br>
+
+<label for="checkbox3">
+    <input type="checkbox" id="checkbox3" name="checkbox" value="Arbeta med människor"> Arbeta med människor
+</label>
+<br>
+
+<label for="checkbox4">
+    <input type="checkbox" id="checkbox4" name="checkbox" value="Stå fast vid principer och värderingar"> Stå fast vid principer och värderingar
+</label>
+<br>
+
+<label for="checkbox5">
+    <input type="checkbox" id="checkbox5" name="checkbox" value="Skapa relationer och nätverk"> Skapa relationer och nätverk
+</label>
+<br>
+
+
+<label for="checkbox6">
+    <input type="checkbox" id="checkbox6" name="checkbox" value="Övertala och påverka"> Övertala och påverka
+</label>
+<br>
+
+<label for="checkbox7">
+    <input type="checkbox" id="checkbox7" name="checkbox" value="Presentera och kommunicera information"> Presentera och kommunicera information
+</label>
+<br>
+
+<label for="checkbox8">
+    <input type="checkbox" id="checkbox8" name="checkbox" value="Skriva och rapportera"> Skriva och rapportera
+</label>
+<br>
+
+<label for="checkbox9">
+    <input type="checkbox" id="checkbox9" name="checkbox" value="Tillämpa expertis och teknologi"> Tillämpa expertis och teknologi
+</label>
+<br>
+
+<label for="checkbox10">
+    <input type="checkbox" id="checkbox10" name="checkbox" value="Analysera"> Analysera
+</label>
+<br>
+
+<label for="checkbox11">
+    <input type="checkbox" id="checkbox11" name="checkbox" value="Lära och utforska"> Lära och utforska
+</label>
+<br>
+
+<label for="checkbox12">
+    <input type="checkbox" id="checkbox12" name="checkbox" value="Skapa och uppfinna"> Skapa och uppfinna
+</label>
+<br>
+
+<label for="checkbox13">
+    <input type="checkbox" id="checkbox13" name="checkbox" value="Formulera strategier och koncept"> Formulera strategier och koncept
+</label>
+<br>
+
+<label for="checkbox14">
+    <input type="checkbox" id="checkbox14" name="checkbox" value="Stå fast vid principer och värderingar"> Stå fast vid principer och värderingar
+</label>
+<br>
+
+<label for="checkbox15">
+    <input type="checkbox" id="checkbox15" name="checkbox" value="Planera och organisera"> Planera och organisera
+</label>
+<br>
+
+
+<label for="checkbox16">
+    <input type="checkbox" id="checkbox16" name="checkbox" value="Leverera resultat och uppfylla kundförväntningar"> Leverera resultat och uppfylla kundförväntningar
+</label>
+<br>
+
+<label for="checkbox17">
+    <input type="checkbox" id="checkbox17" name="checkbox" value="Följa instruktioner och procedurer"> Följa instruktioner och procedurer
+</label>
+<br>
+
+<label for="checkbox18">
+    <input type="checkbox" id="checkbox18" name="checkbox" value="Anpassa och reagera på förändring"> Anpassa och reagera på förändring
+</label>
+<br>
+
+<label for="checkbox19">
+    <input type="checkbox" id="checkbox19" name="checkbox" value="Hantera krav och motgångar"> Hantera krav och motgångar
+</label>
+<br>
+
+<label for="checkbox20">
+    <input type="checkbox" id="checkbox20" name="checkbox" value="Uppnå personliga arbetsmål"> Uppnå personliga arbetsmål
+</label>
+<br>
+
+<label for="checkbox21">
+    <input type="checkbox" id="checkbox21" name="checkbox" value="Företagaranda och kommersiellt tänkande"> Företagaranda och kommersiellt tänkande
+</label>
+<br>
+
+    <div class="submit_div">
+        <input type="submit" value="Submit">
+    </div>
+
+        <!-- Submit Button -->
+    </form>
+
+    <div>
+        {% if output %}
+        <h3>Succesfully modified the presentation! Download Below</h3>
+        <a href="/download" class="download-button">Download Modified Presentation</a>
+        {% endif %}
+    
+        {% if error_message %}
+        <h3 class="error_message">{{ error_message }}</h3>
+        {% endif %}
+    </div>
+    
+    
+    
+
+    <!-- Add your JavaScript code or other HTML elements as needed -->
+
+    <!-- Add your JavaScript files and other necessary external resources here -->
+
+</body>
+</html>
